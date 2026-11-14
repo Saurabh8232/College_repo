@@ -1,0 +1,46 @@
+
+Assignment 9: Aliases and CASE
+
+Task 1: Column aliases using AS
+
+mysql> SELECT candidate AS participant, points AS total_points FROM test_score;
++-------------+--------------+
+| participant | total_points |
++-------------+--------------+
+| Saurabh     |           81 |
+| Pallavi     |           39 |
+| Akash       |           55 |
+| Ritika      |           22 |
+| Dev         |           40 |
++-------------+--------------+
+5 rows in set (0.00 sec)
+
+Task 2: Qualified or Not Qualified using CASE
+
+mysql> SELECT candidate,
+    ->        CASE WHEN points >= 40 THEN 'Qualified' ELSE 'Not Qualified' END AS status
+    -> FROM test_score;
++-----------+---------------+
+| candidate | status        |
++-----------+---------------+
+| Saurabh   | Qualified     |
+| Pallavi   | Not Qualified |
+| Akash     | Qualified     |
+| Ritika    | Not Qualified |
+| Dev       | Qualified     |
++-----------+---------------+
+5 rows in set (0.00 sec)
+
+Task 3: Points after deducting 3 penalty points
+
+mysql> SELECT candidate, points - 3 AS after_penalty FROM test_score;
++-----------+---------------+
+| candidate | after_penalty |
++-----------+---------------+
+| Saurabh   |            78 |
+| Pallavi   |            36 |
+| Akash     |            52 |
+| Ritika    |            19 |
+| Dev       |            37 |
++-----------+---------------+
+5 rows in set (0.00 sec)

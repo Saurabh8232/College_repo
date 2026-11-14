@@ -1,0 +1,25 @@
+
+Assignment 1: Creating a Table and Adding Rows
+
+Task 1: Create the employee_info table
+
+mysql> CREATE TABLE employee_info (emp_id INT, emp_name VARCHAR(30), salary INT);
+Query OK, 0 rows affected (0.00 sec)
+
+Task 2: Insert three rows with one INSERT
+
+mysql> INSERT INTO employee_info (emp_id, emp_name, salary) VALUES (501, 'Vikram', 42000), (502, 'Sneha', 51000), (503, 'Harsh', 38500);
+Query OK, 3 rows affected (0.00 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+Task 3: Show the table
+
+mysql> SELECT * FROM employee_info;
++--------+----------+--------+
+| emp_id | emp_name | salary |
++--------+----------+--------+
+|    501 | Vikram   |  42000 |
+|    502 | Sneha    |  51000 |
+|    503 | Harsh    |  38500 |
++--------+----------+--------+
+3 rows in set (0.00 sec)

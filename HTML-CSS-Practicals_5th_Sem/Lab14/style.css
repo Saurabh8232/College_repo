@@ -1,0 +1,187 @@
+/* Name: Saurabh Yadav | Roll No: 2410303443 | Assignment 14 | Pages and menu */
+:root {
+    --bg: #f6f1e9;
+    --surface: #ffffff;
+    --ink: #23303b;
+    --muted: #6b7785;
+    --accent: #0f766e;
+    --accent-2: #e07a3f;
+    --line: #ddd3c3;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: Georgia, 'Times New Roman', serif;
+    color: var(--accent);
+    line-height: 1.2;
+}
+
+a { color: var(--accent); }
+a:hover { color: var(--accent-2); }
+
+code {
+    background: #efe7d8;
+    padding: 0.1em 0.4em;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+.wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 2rem 1.25rem 3rem;
+}
+
+.eyebrow {
+    margin: 0;
+    color: var(--accent-2);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.page-head h1 { margin: 0.3rem 0 1.25rem; font-size: 2rem; }
+
+.back {
+    display: inline-block;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.sheet {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 1.5rem;
+}
+
+.hint { color: var(--muted); font-size: 0.9rem; margin-top: 1rem; }
+
+/* ---- menu page ---- */
+.hero {
+    border-left: 6px solid var(--accent-2);
+    padding-left: 1rem;
+    margin-bottom: 1.75rem;
+}
+.hero h1 { margin: 0.2rem 0 0.4rem; font-size: 2.1rem; }
+.hero .who { margin: 0; color: var(--muted); }
+.aim { margin: 0 0 1.5rem; }
+
+.tasks {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 1rem;
+}
+.tasks a {
+    display: block;
+    height: 100%;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-top: 4px solid var(--accent-2);
+    border-radius: 10px;
+    padding: 1.1rem;
+    color: var(--ink);
+    text-decoration: none;
+    transition: transform 0.15s, border-top-color 0.15s;
+}
+.tasks a:hover { transform: translateY(-3px); border-top-color: var(--accent); }
+.tasks .num {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    padding: 0.1rem 0.6rem;
+    border-radius: 999px;
+    background: var(--accent-2);
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+.tasks strong {
+    display: block;
+    color: var(--accent);
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 1.1rem;
+}
+.tasks small { display: block; margin-top: 0.4rem; color: var(--muted); }
+
+/* ---- three equal columns ---- */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+}
+.grid div {
+    padding: 28px;
+    border-radius: 10px;
+    background: #e6f4f1;
+    border: 1px solid #b7ded8;
+    color: var(--accent);
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 1.5rem;
+    text-align: center;
+}
+.grid div:nth-child(even) { background: #fdf0e6; border-color: #f2cfb4; color: var(--accent-2); }
+
+/* ---- responsive gallery ---- */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 12px;
+}
+.gallery figure {
+    margin: 0;
+    height: 110px;
+    display: flex;
+    align-items: flex-end;
+    padding: 8px 10px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+.gallery figure:nth-child(4n+1) { background: linear-gradient(135deg, #0f766e, #5eb8ae); }
+.gallery figure:nth-child(4n+2) { background: linear-gradient(135deg, #e07a3f, #f2b48a); }
+.gallery figure:nth-child(4n+3) { background: linear-gradient(135deg, #23303b, #5d7388); }
+.gallery figure:nth-child(4n+4) { background: linear-gradient(135deg, #b4440e, #e07a3f); }
+
+/* ---- named grid areas ---- */
+.dashboard {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    grid-template-areas:
+        "header header"
+        "sidebar main"
+        "footer footer";
+    gap: 10px;
+}
+.dashboard > * { padding: 18px; border-radius: 10px; }
+.dash-header { grid-area: header; background: var(--accent); color: #fff; }
+.dash-header h2 { margin: 0; color: #fff; font-size: 1.25rem; }
+.dash-sidebar { grid-area: sidebar; background: #fdf0e6; min-height: 190px; }
+.dash-sidebar ul { margin: 0; padding-left: 1.1rem; }
+.dash-main { grid-area: main; background: #efe7d8; min-height: 190px; }
+.dash-footer { grid-area: footer; background: var(--ink); color: #fff; font-size: 0.9rem; }
+.dash-main h3, .dash-sidebar h3 { margin-top: 0; }
+
+@media (max-width: 520px) {
+    .dashboard {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "main"
+            "sidebar"
+            "footer";
+    }
+}

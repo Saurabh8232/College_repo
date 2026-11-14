@@ -1,0 +1,36 @@
+
+Assignment 15: Indexes and Adding a Row
+
+Task 1: Create an index on town
+
+mysql> CREATE INDEX idx_supplier_town ON supplier (town);
+Query OK, 0 rows affected (0.00 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Task 2: Suppliers from Jaipur, sorted by name
+
+mysql> SELECT sname FROM supplier WHERE town = 'Jaipur' ORDER BY sname;
++--------+
+| sname  |
++--------+
+| Naveen |
+| Omkar  |
++--------+
+2 rows in set (0.00 sec)
+
+Task 3: Add supplier 5 and show the table
+
+mysql> INSERT INTO supplier (supplier_id, sname, town) VALUES (5, 'Jatin', 'Nagpur');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> SELECT * FROM supplier;
++-------------+--------+--------+
+| supplier_id | sname  | town   |
++-------------+--------+--------+
+|           1 | Omkar  | Jaipur |
+|           2 | Preeti | Surat  |
+|           3 | Naveen | Jaipur |
+|           4 | Bhavna | Indore |
+|           5 | Jatin  | Nagpur |
++-------------+--------+--------+
+5 rows in set (0.00 sec)

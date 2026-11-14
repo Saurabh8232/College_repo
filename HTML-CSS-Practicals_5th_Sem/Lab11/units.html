@@ -1,0 +1,49 @@
+<!-- Name: Saurabh Yadav | Roll No: 2410303443 | Assignment 11 | Task 1 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Units</title>
+    <style>
+        body {
+            margin: 0;
+            background: #f6f1e9;
+            color: #23303b;
+            font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+        }
+        h1, h2, h3 { font-family: Georgia, 'Times New Roman', serif; color: #0f766e; }
+        .wrap { max-width: 760px; margin: 0 auto; padding: 2rem 1.25rem 3rem; }
+        .sheet { background: #fff; border: 1px solid #ddd3c3; border-radius: 10px; padding: 1.5rem; }
+        .back { display: inline-block; margin-bottom: 1rem; font-size: 0.9rem; font-weight: 600; color: #0f766e; text-decoration: none; }
+        .eyebrow { margin: 0; color: #e07a3f; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
+        .page-head h1 { margin: 0.3rem 0 1.25rem; font-size: 2rem; line-height: 1.2; }
+        .hint { color: #6b7785; font-size: 0.9rem; margin-top: 1rem; }
+        code { background: #efe7d8; padding: 0.1em 0.4em; border-radius: 4px; font-size: 0.9em; }
+        .bar { height: 2.5rem; line-height: 2.5rem; margin-top: 10px; padding-left: 0.75rem; color: #fff; font-size: 0.9rem; white-space: nowrap; overflow: hidden; }
+        .b-px { width: 200px; background: #0f766e; }
+        .b-pct { width: 50%; background: #e07a3f; }
+        .b-em { width: 12em; background: #0f766e; font-size: 0.9rem; }
+        .b-vw { width: 40vw; background: #e07a3f; }
+        .rem-text { font-size: 1.5rem; margin-bottom: 0; }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <header class="page-head">
+            <a class="back" href="index.html">&larr; Back to Lab 11 menu</a>
+            <p class="eyebrow">Lab 11 &middot; Task 1</p>
+            <h1>Absolute and Relative Units</h1>
+        </header>
+        <main class="sheet">
+            <div class="bar b-px">200px (fixed)</div>
+            <div class="bar b-pct">50% of the parent</div>
+            <div class="bar b-em">12em (font-relative)</div>
+            <div class="bar b-vw">40vw (40% of the viewport width)</div>
+            <p class="rem-text">This sentence is 1.5rem - relative to the root font-size.</p>
+            <p class="hint">px is fixed, % follows the parent, em and rem follow font sizes, vw follows the window.</p>
+        </main>
+    </div>
+</body>
+</html>

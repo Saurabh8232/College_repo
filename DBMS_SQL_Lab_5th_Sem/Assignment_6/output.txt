@@ -1,0 +1,41 @@
+
+Assignment 6: Sorting Rows and Removing Repeats
+
+Task 1: All gadgets sorted by cost, lowest first
+
+mysql> SELECT gadget_name, cost FROM gadget ORDER BY cost ASC;
++-------------+-------+
+| gadget_name | cost  |
++-------------+-------+
+| Mouse       |   450 |
+| Keyboard    |  1200 |
+| Earbuds     |  1800 |
+| Router      |  2200 |
+| Tablet      | 15000 |
++-------------+-------+
+5 rows in set (0.00 sec)
+
+Task 2: Each kind once, sorted by name
+
+mysql> SELECT DISTINCT kind FROM gadget ORDER BY kind;
++-----------+
+| kind      |
++-----------+
+| Accessory |
+| Audio     |
+| Computing |
+| Network   |
++-----------+
+4 rows in set (0.00 sec)
+
+Task 3: Three costliest gadgets
+
+mysql> SELECT gadget_name, cost FROM gadget ORDER BY cost DESC LIMIT 3;
++-------------+-------+
+| gadget_name | cost  |
++-------------+-------+
+| Tablet      | 15000 |
+| Router      |  2200 |
+| Earbuds     |  1800 |
++-------------+-------+
+3 rows in set (0.00 sec)

@@ -1,0 +1,34 @@
+
+Assignment 4: Combining Conditions
+
+Task 1: Panthers players with more than 5 wickets (AND)
+
+mysql> SELECT cname, wickets FROM cricketer WHERE squad = 'Panthers' AND wickets > 5;
++-------+---------+
+| cname | wickets |
++-------+---------+
+| Rahul |      12 |
++-------+---------+
+1 row in set (0.00 sec)
+
+Task 2: Players with wickets between 5 and 13 (BETWEEN)
+
+mysql> SELECT cname, wickets FROM cricketer WHERE wickets BETWEEN 5 AND 13;
++--------+---------+
+| cname  | wickets |
++--------+---------+
+| Rahul  |      12 |
+| Ishaan |       7 |
++--------+---------+
+2 rows in set (0.00 sec)
+
+Task 3: Players of Hawks or Wolves (IN)
+
+mysql> SELECT cname, squad FROM cricketer WHERE squad IN ('Hawks', 'Wolves');
++--------+--------+
+| cname  | squad  |
++--------+--------+
+| Ishaan | Hawks  |
+| Sagar  | Wolves |
++--------+--------+
+2 rows in set (0.00 sec)

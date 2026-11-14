@@ -1,0 +1,52 @@
+
+Assignment 13: UNION and INTERSECT
+
+Task 1: All people from both batches, each once (UNION)
+
+mysql> SELECT person FROM batch_x
+    -> UNION
+    -> SELECT person FROM batch_y
+    -> ORDER BY person;
++--------+
+| person |
++--------+
+| Divya  |
+| Karan  |
+| Mohit  |
+| Sagar  |
+| Tanvi  |
++--------+
+5 rows in set (0.00 sec)
+
+Task 2: People in both batches (INTERSECT)
+
+mysql> SELECT person FROM batch_x
+    -> INTERSECT
+    -> SELECT person FROM batch_y
+    -> ORDER BY person;
++--------+
+| person |
++--------+
+| Mohit  |
+| Tanvi  |
++--------+
+2 rows in set (0.00 sec)
+
+Task 3: All people including repeats (UNION ALL)
+
+mysql> SELECT person FROM batch_x
+    -> UNION ALL
+    -> SELECT person FROM batch_y
+    -> ORDER BY person;
++--------+
+| person |
++--------+
+| Divya  |
+| Karan  |
+| Mohit  |
+| Mohit  |
+| Sagar  |
+| Tanvi  |
+| Tanvi  |
++--------+
+7 rows in set (0.00 sec)

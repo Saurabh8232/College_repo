@@ -1,0 +1,59 @@
+/* Name: Saurabh Yadav | Roll No: 2410303443 | Assignment 11 | Task 3 */
+/* All colours and spacing are stored once as custom properties. */
+:root {
+    --primary-color: #0f766e;
+    --accent-color: #e07a3f;
+    --ink-color: #23303b;
+    --page-bg: #f6f1e9;
+    --card-bg: #ffffff;
+    --border-color: #ddd3c3;
+    --heading-size: 2.25rem;
+    --spacing: 24px;
+}
+
+body {
+    margin: 0;
+    padding: var(--spacing);
+    background: var(--page-bg);
+    color: var(--ink-color);
+    font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+    line-height: 1.6;
+}
+
+main {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: var(--spacing);
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+}
+
+h1 {
+    margin-top: 0;
+    padding-bottom: calc(var(--spacing) / 3);
+    border-bottom: 4px solid var(--accent-color);
+    color: var(--primary-color);
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: var(--heading-size);
+}
+
+.chips {
+    display: flex;
+    gap: calc(var(--spacing) / 2);
+    padding: 0;
+    list-style: none;
+}
+
+.chips li {
+    flex: 1;
+    padding: calc(var(--spacing) / 2);
+    border-radius: 10px;
+    color: #fff;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.chip-primary { background: var(--primary-color); }
+.chip-accent { background: var(--accent-color); }
+.chip-ink { background: var(--ink-color); }

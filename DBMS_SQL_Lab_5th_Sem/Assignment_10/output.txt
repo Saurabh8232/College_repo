@@ -1,0 +1,51 @@
+
+Assignment 10: Joining Two Tables with INNER JOIN
+
+Task 1: Teacher name with faculty name
+
+mysql> SELECT t.teacher_name, f.fac_name
+    -> FROM teacher t
+    -> INNER JOIN faculty f ON t.fac_id = f.fac_id
+    -> ORDER BY t.teacher_name;
++--------------+----------+
+| teacher_name | fac_name |
++--------------+----------+
+| Bharat       | Commerce |
+| Kavita       | Commerce |
+| Mahesh       | Science  |
+| Rajeev       | Science  |
+| Sunita       | Arts     |
++--------------+----------+
+5 rows in set (0.00 sec)
+
+Task 2: Teachers in the Commerce faculty
+
+mysql> SELECT t.teacher_name
+    -> FROM teacher t
+    -> INNER JOIN faculty f ON t.fac_id = f.fac_id
+    -> WHERE f.fac_name = 'Commerce'
+    -> ORDER BY t.teacher_name;
++--------------+
+| teacher_name |
++--------------+
+| Bharat       |
+| Kavita       |
++--------------+
+2 rows in set (0.00 sec)
+
+Task 3: Teacher, faculty and pay, lowest pay first
+
+mysql> SELECT t.teacher_name, f.fac_name, t.pay
+    -> FROM teacher t
+    -> INNER JOIN faculty f ON t.fac_id = f.fac_id
+    -> ORDER BY t.pay ASC;
++--------------+----------+-------+
+| teacher_name | fac_name | pay   |
++--------------+----------+-------+
+| Sunita       | Arts     | 49000 |
+| Rajeev       | Science  | 58000 |
+| Bharat       | Commerce | 61000 |
+| Kavita       | Commerce | 65000 |
+| Mahesh       | Science  | 72000 |
++--------------+----------+-------+
+5 rows in set (0.00 sec)

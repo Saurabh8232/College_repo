@@ -1,0 +1,32 @@
+
+Assignment 7: Using Aggregate Functions
+
+Task 1: Number of orders
+
+mysql> SELECT COUNT(*) AS order_count FROM orders;
++-------------+
+| order_count |
++-------------+
+|           5 |
++-------------+
+1 row in set (0.00 sec)
+
+Task 2: Average bill
+
+mysql> SELECT AVG(bill) AS avg_bill FROM orders;
++-----------+
+| avg_bill  |
++-----------+
+| 2160.0000 |
++-----------+
+1 row in set (0.00 sec)
+
+Task 3: Lowest bill
+
+mysql> SELECT MIN(bill) AS lowest FROM orders;
++--------+
+| lowest |
++--------+
+|    900 |
++--------+
+1 row in set (0.00 sec)

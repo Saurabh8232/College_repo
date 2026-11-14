@@ -1,0 +1,30 @@
+
+Assignment 14: Creating and Using a View
+
+Task 1: Create the view toppers
+
+mysql> CREATE VIEW toppers AS
+    -> SELECT student, grade_pts FROM result_card WHERE grade_pts >= 80;
+Query OK, 0 rows affected (0.00 sec)
+
+Task 2: Show all rows of the view
+
+mysql> SELECT * FROM toppers;
++---------+-----------+
+| student | grade_pts |
++---------+-----------+
+| Divya   |        83 |
+| Mohit   |        91 |
++---------+-----------+
+2 rows in set (0.00 sec)
+
+Task 3: Only the students from the view, sorted Z to A
+
+mysql> SELECT student FROM toppers ORDER BY student DESC;
++---------+
+| student |
++---------+
+| Mohit   |
+| Divya   |
++---------+
+2 rows in set (0.00 sec)

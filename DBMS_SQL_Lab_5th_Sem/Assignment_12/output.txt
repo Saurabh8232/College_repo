@@ -1,0 +1,36 @@
+
+Assignment 12: Using a Subquery
+
+Task 1: People in batch_x who are also in batch_y
+
+mysql> SELECT person FROM batch_x
+    -> WHERE person IN (SELECT person FROM batch_y);
++--------+
+| person |
++--------+
+| Mohit  |
+| Tanvi  |
++--------+
+2 rows in set (0.00 sec)
+
+Task 2: Number of people in batch_x
+
+mysql> SELECT COUNT(*) AS total_people FROM batch_x;
++--------------+
+| total_people |
++--------------+
+|            4 |
++--------------+
+1 row in set (0.00 sec)
+
+Task 3: People in batch_y sorted by name, Z to A
+
+mysql> SELECT person FROM batch_y ORDER BY person DESC;
++--------+
+| person |
++--------+
+| Tanvi  |
+| Sagar  |
+| Mohit  |
++--------+
+3 rows in set (0.00 sec)

@@ -1,0 +1,48 @@
+
+Assignment 2: Updating and Deleting Rows
+
+Task 1: Change units of prod_id 11 to 60
+
+mysql> UPDATE inventory SET units = 60 WHERE prod_id = 11;
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> SELECT * FROM inventory;
++---------+-----------+-------+
+| prod_id | prod_name | units |
++---------+-----------+-------+
+|      11 | Marker    |    60 |
+|      12 | Stapler   |    90 |
+|      13 | Folder    |     0 |
++---------+-----------+-------+
+3 rows in set (0.00 sec)
+
+Task 2: Add 25 to units of prod_id 12
+
+mysql> UPDATE inventory SET units = units + 25 WHERE prod_id = 12;
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> SELECT * FROM inventory;
++---------+-----------+-------+
+| prod_id | prod_name | units |
++---------+-----------+-------+
+|      11 | Marker    |    60 |
+|      12 | Stapler   |   115 |
+|      13 | Folder    |     0 |
++---------+-----------+-------+
+3 rows in set (0.00 sec)
+
+Task 3: Delete the row of prod_id 13
+
+mysql> DELETE FROM inventory WHERE prod_id = 13;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> SELECT * FROM inventory;
++---------+-----------+-------+
+| prod_id | prod_name | units |
++---------+-----------+-------+
+|      11 | Marker    |    60 |
+|      12 | Stapler   |   115 |
++---------+-----------+-------+
+2 rows in set (0.00 sec)

@@ -1,0 +1,64 @@
+
+Assignment 11: Other Kinds of Joins
+
+Task 1: LEFT JOIN, club on the left
+
+mysql> SELECT c.club_name, m.member_name
+    -> FROM club c
+    -> LEFT JOIN member m ON c.club_id = m.club_id
+    -> ORDER BY c.club_name, m.member_name;
++-----------+-------------+
+| club_name | member_name |
++-----------+-------------+
+| Chess     | Aman        |
+| Chess     | Zoya        |
+| Drama     | NULL        |
+| Music     | Ritu        |
+| Music     | Tarun       |
+| Robotics  | NULL        |
++-----------+-------------+
+6 rows in set (0.00 sec)
+
+Task 2: CROSS JOIN of club and member
+
+mysql> SELECT c.club_name, m.member_name
+    -> FROM club c
+    -> CROSS JOIN member m
+    -> ORDER BY c.club_name, m.member_name;
++-----------+-------------+
+| club_name | member_name |
++-----------+-------------+
+| Chess     | Aman        |
+| Chess     | Ritu        |
+| Chess     | Tarun       |
+| Chess     | Zoya        |
+| Drama     | Aman        |
+| Drama     | Ritu        |
+| Drama     | Tarun       |
+| Drama     | Zoya        |
+| Music     | Aman        |
+| Music     | Ritu        |
+| Music     | Tarun       |
+| Music     | Zoya        |
+| Robotics  | Aman        |
+| Robotics  | Ritu        |
+| Robotics  | Tarun       |
+| Robotics  | Zoya        |
++-----------+-------------+
+16 rows in set (0.00 sec)
+
+Task 3: NATURAL JOIN of member and club
+
+mysql> SELECT member_name, club_name
+    -> FROM member
+    -> NATURAL JOIN club
+    -> ORDER BY member_name;
++-------------+-----------+
+| member_name | club_name |
++-------------+-----------+
+| Aman        | Chess     |
+| Ritu        | Music     |
+| Tarun       | Music     |
+| Zoya        | Chess     |
++-------------+-----------+
+4 rows in set (0.00 sec)

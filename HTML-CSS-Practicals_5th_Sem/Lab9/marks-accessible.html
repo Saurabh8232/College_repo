@@ -1,0 +1,32 @@
+<!-- Name: Saurabh Yadav | Roll No: 2410303443 | Assignment 9 | Task 3 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessible Marks Table</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrap">
+        <header class="page-head">
+            <a class="back" href="index.html">&larr; Back to Lab 9 menu</a>
+            <p class="eyebrow">Lab 9 &middot; Task 3</p>
+            <h1>An Accessible Marks Table</h1>
+        </header>
+        <main class="sheet">
+            <table>
+                <caption>Unit test marks - Section B</caption>
+                <thead>
+                    <tr><th scope="col">Student</th><th scope="col">Maths</th><th scope="col">Science</th></tr>
+                </thead>
+                <tbody>
+                    <tr><th scope="row">Kabir</th><td>72</td><td>58</td></tr>
+                    <tr><th scope="row">Ishita</th><td>88</td><td>91</td></tr>
+                </tbody>
+            </table>
+            <p class="hint">Column headers use <code>scope="col"</code> and each student name uses <code>scope="row"</code>, so screen readers can link every number to its header.</p>
+        </main>
+    </div>
+</body>
+</html>

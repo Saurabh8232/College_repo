@@ -1,0 +1,37 @@
+
+Assignment 8: Grouping Rows and Using HAVING
+
+Task 1: Number of purchases in each city
+
+mysql> SELECT city, COUNT(*) AS purchases FROM purchase GROUP BY city ORDER BY city;
++---------+-----------+
+| city    | purchases |
++---------+-----------+
+| Agra    |         2 |
+| Kanpur  |         2 |
+| Lucknow |         2 |
++---------+-----------+
+3 rows in set (0.00 sec)
+
+Task 2: Total bill in each city
+
+mysql> SELECT city, SUM(bill) AS total_bill FROM purchase GROUP BY city ORDER BY city;
++---------+------------+
+| city    | total_bill |
++---------+------------+
+| Agra    |       4850 |
+| Kanpur  |       3950 |
+| Lucknow |       3300 |
++---------+------------+
+3 rows in set (0.00 sec)
+
+Task 3: Cities with total bill more than 3500
+
+mysql> SELECT city, SUM(bill) AS total_bill FROM purchase GROUP BY city HAVING SUM(bill) > 3500 ORDER BY city;
++--------+------------+
+| city   | total_bill |
++--------+------------+
+| Agra   |       4850 |
+| Kanpur |       3950 |
++--------+------------+
+2 rows in set (0.00 sec)

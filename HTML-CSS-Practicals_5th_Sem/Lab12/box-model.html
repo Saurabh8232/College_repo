@@ -1,0 +1,26 @@
+<!-- Name: Saurabh Yadav | Roll No: 2410303443 | Assignment 12 | Task 1 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrap">
+        <header class="page-head">
+            <a class="back" href="index.html">&larr; Back to Lab 12 menu</a>
+            <p class="eyebrow">Lab 12 &middot; Task 1</p>
+            <h1>content-box vs border-box</h1>
+        </header>
+        <main class="sheet">
+            <div class="box first">content-box</div>
+            <p class="calc">width 240 + padding 40 + border 12 = 292px on screen</p>
+            <div class="box second">border-box</div>
+            <p class="calc">width 240 includes padding and border = 240px on screen</p>
+            <p class="hint">Both boxes ask for <code>width: 240px</code>; only the <code>box-sizing</code> value differs.</p>
+        </main>
+    </div>
+</body>
+</html>

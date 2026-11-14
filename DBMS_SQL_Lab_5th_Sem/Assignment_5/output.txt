@@ -1,0 +1,34 @@
+
+Assignment 5: Pattern Matching with LIKE
+
+Task 1: Titles that start with S
+
+mysql> SELECT mag_title FROM magazine WHERE mag_title LIKE 'S%';
++---------------+
+| mag_title     |
++---------------+
+| Science Today |
+| Sports Weekly |
++---------------+
+2 rows in set (0.00 sec)
+
+Task 2: Titles that end with s
+
+mysql> SELECT mag_title FROM magazine WHERE mag_title LIKE '%s';
++----------------+
+| mag_title      |
++----------------+
+| Travel Diaries |
+| Cooking Basics |
++----------------+
+2 rows in set (0.00 sec)
+
+Task 3: Titles whose second letter is o
+
+mysql> SELECT mag_title FROM magazine WHERE mag_title LIKE '_o%';
++----------------+
+| mag_title      |
++----------------+
+| Cooking Basics |
++----------------+
+1 row in set (0.00 sec)

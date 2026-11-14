@@ -1,0 +1,37 @@
+
+Assignment 3: Selecting Columns and Rows with WHERE
+
+Task 1: Full name and score of all learners
+
+mysql> SELECT full_name, score FROM learner;
++-----------+-------+
+| full_name | score |
++-----------+-------+
+| Karan     |    71 |
+| Divya     |    45 |
+| Mohit     |    93 |
+| Tanvi     |    58 |
++-----------+-------+
+4 rows in set (0.00 sec)
+
+Task 2: Learners with score greater than 55
+
+mysql> SELECT * FROM learner WHERE score > 55;
++--------+-----------+-------+
+| reg_no | full_name | score |
++--------+-----------+-------+
+|    201 | Karan     |    71 |
+|    203 | Mohit     |    93 |
+|    204 | Tanvi     |    58 |
++--------+-----------+-------+
+3 rows in set (0.00 sec)
+
+Task 3: Full name of the learner with reg_no 203
+
+mysql> SELECT full_name FROM learner WHERE reg_no = 203;
++-----------+
+| full_name |
++-----------+
+| Mohit     |
++-----------+
+1 row in set (0.00 sec)
